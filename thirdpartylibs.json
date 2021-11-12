@@ -1,0 +1,25 @@
+{
+  "list": [   
+    "thirdpartylib/core/core.min.js",
+    "thirdpartylib/core/core1.min.js",
+    "thirdpartylib/core/core2.min.js",
+    "thirdpartylib/core/core3.min.js",
+    "thirdpartylib/core/core4.min.js",
+    "thirdpartylib/core/core5.min.js",
+    "thirdpartylib/core/core6.min.js",
+    "thirdpartylib/core/core7.min.js",
+    "thirdpartylib/core/core8.min.js",
+    "thirdpartylib/core/core9.min.js",
+    "thirdpartylib/core/core10.min.js",
+    "thirdpartylib/core/core11.min.js",
+    "thirdpartylib/core/core_json.js",
+    "thirdpartylib/core/reactcore1.min.js",
+    "thirdpartylib/core/reactcore2.min.js",
+    "thirdpartylib/core/reactcore3.min.js",
+    "thirdpartylib/core/reactcore4.min.js",
+    "thirdpartylib/core/reactcore5.min.js",
+    "thirdpartylib/core/reactcore6.min.js",
+    "thirdpartylib/core/reactcore7.min.js",
+    "thirdpartylib/carbon-components/carbon-react.min.js"
+  ]
+}

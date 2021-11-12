@@ -1,0 +1,82 @@
+{
+  "jspm": {
+    "main": "app.js",
+    "dependencies": {
+      "redux-first-routing": "npm:redux-first-routing@^0.3.0",
+      "universal-router": "npm:universal-router@^7.0.0"
+    },
+    "devDependencies": {
+      "@types/async": "npm:@types/async@2.0.50",
+      "apollo-client": "npm:apollo-client@2.4.8",
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "carbon-components": "npm:carbon-components@^10.6.0",
+      "carbon-components-react": "npm:carbon-components-react@7.6.4",
+      "carbon-icons": "npm:carbon-icons@^7.0.7",
+      "child_process": "npm:jspm-nodelibs-child_process@^0.2.0",
+      "core-js": "npm:core-js@^1.1.4",
+      "fs": "npm:jspm-nodelibs-fs@^0.2.0",
+      "graphql": "npm:graphql@^14.0.0",
+      "lodash": "npm:lodash@4.17.11",
+      "prop-types": "npm:prop-types",
+      "react": "npm:react@^16.8.6",
+      "react-copy-to-clipboard": "npm:react-copy-to-clipboard@^5.0.2",
+      "react-dom": "npm:react-dom@^16.8.6",
+      "to-fast-properties": "npm:to-fast-properties@1.0.3"
+    },
+    "peerDependencies": {
+      "buffer": "npm:jspm-nodelibs-buffer@^0.2.0",
+      "events": "npm:jspm-nodelibs-events@^0.2.0",
+      "path": "npm:jspm-nodelibs-path@^0.2.0",
+      "process": "npm:jspm-nodelibs-process@^0.2.0",
+      "stream": "npm:jspm-nodelibs-stream@^0.2.0",
+      "util": "npm:jspm-nodelibs-util@^0.2.0"
+    },
+    "overrides": {
+      "npm:babel-core@5.8.38": {
+        "main": "browser.js",
+        "dependencies": {},
+        "jspmNodeConversion": false,
+        "map": {
+          "regenerator/runtime": "babel-runtime/regenerator/runtime"
+        },
+        "meta": {
+          "browser.js": {
+            "exports": "babel",
+            "format": "global"
+          }
+        }
+      },
+      "npm:inherits@2.0.4": {
+        "ignore": [
+          "test.js"
+        ]
+      },
+      "npm:pbkdf2@3.0.17": {
+        "main": "browser.js"
+      },
+      "npm:safe-buffer@5.1.2": {
+        "browser": "index.js"
+      },
+      "npm:tslib@1.10.0": {
+        "format": "cjs",
+        "meta": {
+          "tslib.js": {
+            "esModule": true
+          }
+        }
+      },
+      "npm:tslib@1.9.3": {
+        "format": "cjs",
+        "meta": {
+          "tslib.js": {
+            "esModule": true
+          }
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "react-responsive-data-table": "^1.0.4"
+  }
+}

@@ -1,0 +1,450 @@
+{
+  "name": "pratisrstee",
+  "version": "1.0.0",
+  "main": "config/index.js",
+  "engines": {
+    "node": ">=4"
+  },
+  "config": {
+    "core_libs1": "plugin-babel + history + prop-types + react-table + react-icon-base + react-router",
+    "core_libs2": "react-redux + react-ace + react-select + react-treebeard + react-table + react-router-dom + react-materialize + react-monaco-editor + react-grid-layout + codemirror + graphql + isomorphic-fetch + lodash + systemjs-plugin-babel + babel-plugin-transform-custom-element-classes + css + namor",
+    "core_libs3": "npm:babel-plugin-transform-custom-element-classes@0.1.0 + npm:babel-plugin-transform-es2015-classes@6.24.1 + npm:babel-template@6.26.0 + npm:babel-helper-function-name@6.24.1 + npm:lodash@4.17.15 + npm:babel-traverse@6.26.0 + npm:babylon@6.18.0 + npm:babel-types@6.26.0 + npm:core-js@2.6.9 + npm:babel-helper-replace-supers@6.24.1 + npm:babel-helper-optimise-call-expression@6.24.1 + npm:babel-helper-define-map@6.26.0 + npm:babel-helper-get-function-arity@6.24.1 + npm:babylon@6.18.0 + npm:babel-types@6.26.0 + npm:babel-helper-optimise-call-expression@6.24.1 + npm:jspm-nodelibs-process@0.2.1 + npm:to-fast-properties@1.0.3 + npm:babel-messages@6.23.0 + npm:esutils@2.0.3 + npm:debug@2.6.9 + npm:invariant@2.2.4 + npm:globals@9.18.0 + npm:ms@2.0.0 + npm:babel-code-frame@6.26.0 + npm:js-tokens@3.0.2 + npm:chalk@1.1.3 + npm:escape-string-regexp@1.0.5 + npm:ansi-styles@2.2.1 + npm:strip-ansi@3.0.1 + npm:has-ansi@2.0.0 + npm:supports-color@2.0.0 + npm:systemjs-plugin-babel@0.0.25 + npm:jquery@3.3.1 + npm:graphql-lodash@1.3.4 + npm:universal-router@7.0.0 + npm:redux-first-routing@0.3.0 + npm:redux@4.0.4 + npm:redux-virtual-dom@0.9.3 + npm:deepmerge@4.0.0 + npm:lodash.clonedeep@4.5.0 + npm:lodash.debounce@4.0.8 + npm:react@16.12.0 + npm:react-router@3.2.1 + npm:react-router-dom@4.3.1 + npm:lodash.set@4.3.2 + npm:path-to-regexp@2.4.0 + npm:history@4.10.1 + npm:query-string@5.1.1 + npm:symbol-observable@1.2.0 + npm:strict-uri-encode@1.1.0 + npm:object-assign@4.1.1 + npm:decode-uri-component@0.2.0 + npm:prop-types@15.7.2 + npm:create-react-class@15.6.3 + npm:hoist-non-react-statics@2.5.5 + npm:warning@4.0.3 + npm:react-router@4.3.1 + npm:create-react-class@15.6.3 + npm:hoist-non-react-statics@2.5.5 + npm:react-is@16.12.0 + npm:resolve-pathname@3.0.0 + npm:value-equal@1.0.1 + npm:tiny-warning@1.0.3 + npm:tiny-invariant@1.0.6 + npm:base64-js@1.3.1 + npm:ieee754@1.1.13 + npm:fbjs@0.8.17 + npm:isarray@0.0.1  + npm:scheduler@0.18.0 + npm:react-monaco-editor@0.14.1 + npm:jquery-ui@1.12.1 + npm:react-materialize@latest + npm:re-resizable@4.11.0 + npm:isomorphic-fetch@2.2.1 + npm:react-treebeard@2.1.0 + npm:whatwg-fetch@2.0.4 + npm:lodash.omit@4.5.0 + npm:lodash.isequal@4.5.0 + npm:flatpickr@4.6.1 + npm:carbon-icons@7.0.7 + npm:focus-trap-react@6.0.0 + npm:classnames@2.2.6 + npm:carbon-components@10.3.1 + npm:window-or-global@1.0.1 + npm:markdown-it@8.4.2 + npm:focus-trap@4.0.2 + npm:codemirror@5.50.2 + npm:radium@0.19.6 + npm:velocity-react@1.4.1 + npm:iterall@1.2.2 + npm:tabbable@3.1.2 + npm:xtend@4.0.2 + npm:linkify-it@2.2.0 + npm:mdurl@1.0.1 + npm:xtend@4.0.2 + npm:iterall@1.2.2 + npm:shallowequal@0.2.2 + npm:deep-equal@1.0.1 + npm:punycode@1.4.1 + npm:exenv@1.2.2 + npm:velocity-animate@1.5.2 + npm:jspm-nodelibs-assert@0.2.1 + npm:react-transition-group@2.9.0 + npm:lodash.keys@3.1.2 + npm:inline-style-prefixer@2.0.5 + npm:uc.micro@1.0.6 + npm:react-transition-group@2.9.0 + npm:react-lifecycles-compat@3.0.4 + npm:inline-style-prefixer@2.0.5 + npm:lodash.keys@3.1.2 + npm:entities@1.1.2 + npm:uc.micro@1.0.6 + npm:lodash._getnative@3.9.1 + npm:lodash.isarguments@3.1.0 + npm:lodash.isarray@3.0.4 + npm:entities@1.1.2 + npm:lodash._getnative@3.9.1 + npm:bowser@1.9.4 + npm:hyphenate-style-name@1.0.2"
+  },
+  "scripts": {
+    "pull": "node server/reader.js",
+    "push": "run(){ node server/pusher.js $1 $2 && npm run postbundle 'all' $1 $2; }; run",
+    "push-bundle": "run(){ npm run postbundle 'all' $1 $2; }; run",
+    "pack": "run(){ grunt --app=$1 && npm run postbundle $1 $2 $3; }; run",
+    "coreappbundle": "grunt --app=studio &&  grunt --app=mmf && grunt --app=persist && grunt --app=buildingblock && grunt --app=pd && grunt --app=designer && grunt --app=workspace && grunt --app=acl",
+    "coreapppublish": "run(){ npm run app-pub 'mmf' $1 && npm run app-pub 'studio' $1 && npm run app-pub 'persist' $1 && npm run app-pub 'buildingblock' $1 && npm run app-pub 'pd' $1 && npm run app-pub 'designer' $1 && npm run app-pub 'workspace' $1 && npm run app-pub 'srsteecore' $1 && npm run app-pub 'acl' $1; }; run",
+    "corelibbundle": "run() { jspm build --inject $npm_package_config_core_libs1 + $npm_package_config_core_libs2 + $npm_package_config_core_libs3 client/bundles/srsteecore_bundle.js && grunt --minify=srsteecore corelibbundle; }; run",
+    "prebundle": "node server/pre-bundler.js",
+    "customlib": "run() { grunt --customlib=$1 corelibbundle && npm run postbundle $1; }; run",
+    "bundle": "jspm build index.js --inject - plugin-babel - history - prop-types - react - react-table - react-icon-base - react-router - react-redux - react-ace - react-select - react-treebeard - react-table - react-router-dom - react-materialize - react-monaco-editor - react-grid-layout - codemirror - graphiql - graphql - isomorphic-fetch - lodash - node-blockly - css - namor",
+    "fullbundle": "jspm build index.js",
+    "fullpack": "run(){ npm run prebundle all && npm run fullbundle client/bundles/all_bundle.js && npm run postbundle all; }; run",
+    "postbundle": "node server/post-bundler.js",
+    "app-pub": "node server/app-publisher.js",
+    "app-reset": "node server/app-reset.js",
+    "enable-bundling": "node server/enableBundling.js 1 $1",
+    "disable-bundling": "node server/enableBundling.js 0 $1"
+  },
+  "dependencies": {
+    "@npmcli/installed-package-contents": "^1.0.5",
+    "babel-core": "6.14.0",
+    "babel-runtime": "^6.26.0",
+    "compression": "^1.0.3",
+    "core-js": "^2.6.5",
+    "cors": "^2.5.2",
+    "create-symlink": "^1.0.0",
+    "deep-equal": "^1.1.0",
+    "delivery": "0.0.6",
+    "diffsync": "^2.1.2",
+    "each-async": "^1.1.1",
+    "express": "^4.13.3",
+    "fs": "0.0.2",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-sed": "^0.1.1",
+    "gulp": "^4.0.0",
+    "gulp-jspm": "^0.5.13",
+    "helmet": "^1.3.0",
+    "http-server": "^0.11.1",
+    "javascript-obfuscator": "^0.18.8",
+    "jspm": "^0.17.0-beta.49",
+    "loopback": "^2.22.0",
+    "loopback-boot": "^2.6.5",
+    "loopback-component-explorer": "^2.4.0",
+    "loopback-connector-mysql": "^5.2.0",
+    "loopback-datasource-juggler": "^3.24.0",
+    "react-flow-diagram": "2.13.0",
+    "recursive-copy": "^2.0.9",
+    "redux-first-routing": "^0.3.0",
+    "require-from-string": "^2.0.2",
+    "serve-favicon": "^2.0.1",
+    "shelljs": "^0.8.2",
+    "simple-websocket": "^7.2.0",
+    "socket.io-client": "^2.1.0",
+    "sql.js": "0.3.2",
+    "strong-error-handler": "^2.0.0",
+    "styled-components": "^3.3.3",
+    "uglify-js": "^3.4.9",
+    "universal-router": "^7.0.0",
+    "uuid": "^3.2.1",
+    "walk": "^2.3.14",
+    "ws": "^5.1.1"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-imports": "^1.5.1",
+    "concurrently": "3.1.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "14.1.0",
+    "eslint-config-loopback": "^8.0.0",
+    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-jsx-a11y": "4.0.0",
+    "eslint-plugin-react": "6.9.0",
+    "grunt": "^1.0.3",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-symlink": "^1.0.0",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-contrib-uglify-es": "^3.3.0",
+    "grunt-iterate": "^0.1.0",
+    "grunt-jspm-builder": "^0.3.1",
+    "grunt-replace": "^1.0.1",
+    "lpad": "^2.0.1",
+    "nsp": "^2.1.0"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "license": "UNLICENSED",
+  "description": "mmf-platform",
+  "jspm": {
+    "registry": "npm",
+    "directories": {
+      "baseURL": "config"
+    },
+    "dependencies": {
+      "@babel/runtime": "7.8.7",
+      "@carbon/icons-react": "^10.11.0",
+      "apollo-cache-inmemory": "^1.3.12",
+      "apollo-upload-client": "^10.0.0",
+      "babel": "babel-core@^5.8.24",
+      "babel-plugin-transform-es2015-classes": "6.24.1",
+      "babel-template": "6.26.0",
+      "bootstrap": "^4.1.1",
+      "brace": "0.11.1",
+      "bufferutil": "3.0.0",
+      "core-js": "2.6.11",
+      "css": "github:systemjs/plugin-css@~0.1.37",
+      "debug": "2.6.9",
+      "deep-equal": "2.0.3",
+      "deepmerge": "4.2.2",
+      "draft-js": "~0.10.5",
+      "escape-string-regexp": "1.0.5",
+      "graphiql": "~0.11.11",
+      "graphql-language-service-interface": "1.3.2",
+      "graphql-language-service-parser": "1.5.2",
+      "graphql-tag": "^2.10.0",
+      "immutability-helper": "^2.7.0",
+      "inherits": "2.0.3",
+      "isomorphic-fetch": "^2.2.1",
+      "lodash": "4.17.11",
+      "material-ui": "~0.20.1",
+      "memory-cache": "^0.2.0",
+      "namor": "1.1.1",
+      "node-blockly": "1.0.35",
+      "path-to-regexp": "1.8.0",
+      "plugin-babel": "systemjs-plugin-babel@0.0.25",
+      "quill": "1.3.6",
+      "quill-render": "^1.0.5",
+      "re-resizable": "^4.11.0",
+      "react-ace": "^6.1.1",
+      "react-addons": "~0.9.1-deprecated",
+      "react-apollo": "^2.3.3",
+      "react-calendar-heatmap": "^1.6.3",
+      "react-custom-scrollbars": "4.2.1",
+      "react-data-grid": "3.0.8",
+      "react-datasheet": "^1.4.8",
+      "react-download-link": "^2.1.3",
+      "react-downloadbutton": "^1.0.0",
+      "react-draggable": "^3.1.1",
+      "react-grid-layout": "~0.16.6",
+      "react-hot-loader": "^4.1.2",
+      "react-html-parser": "2.0.2",
+      "react-icon-base": "2.1.0",
+      "react-live": "^1.10.1",
+      "react-monaco": "~0.1.0-alpha.0",
+      "react-monaco-editor": "~0.14.1",
+      "react-render-html": "~0.6.0",
+      "react-rnd": "^9.0.4",
+      "react-router-config": "^1.0.0-beta.4",
+      "react-router-dom": "^4.2.2",
+      "react-scrollable-list-view": "^2.0.1",
+      "react-select": "^1.2.1",
+      "react-shadow": "^16.3.1",
+      "react-shadow-dom-retarget-events": "^1.0.8",
+      "react-table": "6.8.6",
+      "react-treebeard": "^2.1.0",
+      "react-trello": "2.2.5",
+      "react-wait-for-it": "^0.0.4",
+      "redux-connect": "5.1.0",
+      "redux-first-routing": "0.3.0",
+      "redux-virtual-dom": "~0.9.3",
+      "side-channel": "1.0.2",
+      "snabbdom-jsx": "~0.4.2",
+      "strip-ansi": "3.0.1",
+      "systemjs-plugin-babel": "^0.0.25",
+      "tiny-invariant": "1.1.0",
+      "universal-router": "7.0.0",
+      "utf-8-validate": "4.0.0",
+      "v-runtime-template": "^1.5.2",
+      "vue": "^2.5.21",
+      "ws": "5.2.2"
+    },
+    "devDependencies": {
+      "@jspm/core": "^1.0.4",
+      "acorn-walk": "6.1.1",
+      "babel-plugin-transform-custom-element-classes": "0.1.0",
+      "babel-runtime": "6.26.0",
+      "base64-js": "1.3.1",
+      "browserify-zlib": "^0.2.0",
+      "carbon-components": "10.3.1",
+      "carbon-components-react": "7.3.2",
+      "carbon-icons": "^7.0.7",
+      "crypto-browserify": "3.12.0",
+      "downshift": "1.31.16",
+      "entities": "1.1.2",
+      "flatpickr": "4.6.1",
+      "graphql-lodash": "1.3.4",
+      "history": "4.10.1",
+      "hyphenate-style-name": "1.0.2",
+      "iconv-lite": "0.4.24",
+      "ieee754": "1.1.13",
+      "inline-style-prefixer": "2.0.5",
+      "iterall": "1.2.2",
+      "jquery-ui": "1.12.1",
+      "jsdom": "11.12.0",
+      "lodash.clonedeep": "4.5.0",
+      "lodash.set": "4.3.2",
+      "markdown-it": "8.4.2",
+      "psl": "1.1.29",
+      "react-flow-diagram": "^2.13.0",
+      "react-icons": "2.2.7",
+      "react-materialize": "latest",
+      "react-transition-group": "2.9.0",
+      "snabbdom": "0.7.3",
+      "systemjs-plugin-vue": "^1.2.0",
+      "tj/react-click-outside": "github:tj/react-click-outside@1.1.0",
+      "tr46": "1.0.1",
+      "velocity-animate": "1.5.2",
+      "warning": "4.0.3",
+      "window-or-global": "1.0.1",
+      "xtend": "4.0.2"
+    },
+    "peerDependencies": {
+      "@types/async": "2.0.50",
+      "acorn": "^6.0.0",
+      "ajv": "^6.0.0",
+      "apollo-client": "^2.3.8",
+      "assert": "jspm-nodelibs-assert@~0.2.0",
+      "buffer": "jspm-nodelibs-buffer@~0.2.0",
+      "child_process": "jspm-nodelibs-child_process@~0.2.0",
+      "classnames": "2.2.6",
+      "clipboard": "^2.0.0",
+      "cluster": "jspm-nodelibs-cluster@~0.2.0",
+      "codemirror": "5.51.0",
+      "console": "jspm-nodelibs-console@~0.2.0",
+      "constants": "jspm-nodelibs-constants@~0.2.0",
+      "crypto": "jspm-nodelibs-crypto@~0.2.0",
+      "dgram": "jspm-nodelibs-dgram@~0.2.0",
+      "dns": "jspm-nodelibs-dns@~0.2.0",
+      "domain": "jspm-nodelibs-domain@~0.2.0",
+      "events": "jspm-nodelibs-events@~0.2.0",
+      "fs": "jspm-nodelibs-fs@~0.2.0",
+      "fsevents": "^1.2.2",
+      "graphql": "^14.0.0",
+      "http": "jspm-nodelibs-http@~0.2.0",
+      "https": "jspm-nodelibs-https@~0.2.0",
+      "jquery": "3.5.1",
+      "module": "jspm-nodelibs-module@~0.2.0",
+      "net": "jspm-nodelibs-net@~0.2.0",
+      "os": "jspm-nodelibs-os@~0.2.0",
+      "path": "jspm-nodelibs-path@~0.2.0",
+      "popper.js": "^1.14.1",
+      "process": "jspm-nodelibs-process@~0.2.0",
+      "prop-types": "^15.6.1",
+      "punycode": "jspm-nodelibs-punycode@~0.2.0",
+      "querystring": "jspm-nodelibs-querystring@~0.2.0",
+      "react": "16.13.1",
+      "react-dom": "16.13.1",
+      "react-is": "16.12.0",
+      "react-redux": "5.1.1",
+      "react-router": "3.2.6",
+      "readline": "jspm-nodelibs-readline@~0.2.0",
+      "redux": "4.0.5",
+      "redux-actions": "*",
+      "redux-logger": "*",
+      "repl": "jspm-nodelibs-repl@~0.2.0",
+      "request": "^2.34",
+      "source-map": "~0.6.1",
+      "stream": "jspm-nodelibs-stream@~0.2.0",
+      "string_decoder": "jspm-nodelibs-string_decoder@~0.2.0",
+      "styled-components": "5.1.0",
+      "stylis": "^3.5.0",
+      "timers": "jspm-nodelibs-timers@~0.2.0",
+      "tls": "jspm-nodelibs-tls@~0.2.0",
+      "tty": "jspm-nodelibs-tty@~0.2.0",
+      "uglify-to-browserify": "1.0",
+      "url": "jspm-nodelibs-url@~0.2.0",
+      "util": "jspm-nodelibs-util@~0.2.0",
+      "vm": "jspm-nodelibs-vm@~0.2.0",
+      "webpack": "^3.0.0",
+      "zlib": "jspm-nodelibs-zlib@~0.2.0"
+    },
+    "overrides": {
+      "github:HubSpot/tether@1.4.4": {
+        "main": "js/tether"
+      },
+      "npm:babel-core@5.8.38": {
+        "dependencies": {},
+        "main": "browser.js",
+        "map": {
+          "regenerator/runtime": "babel-runtime/regenerator/runtime"
+        }
+      },
+      "npm:bootstrap@4.1.3": {
+        "dependencies": {
+          "jquery": ":jquery",
+          "tether": "github:HubSpot/tether@^1.1.1"
+        },
+        "main": "dist/js/bootstrap"
+      },
+      "npm:browserify-zlib@0.1.4": {
+        "dependencies": {
+          "readable-stream": "^2.0.2",
+          "pako": "~0.2.0"
+        },
+        "map": {
+          "_stream_transform": "readable-stream/transform"
+        }
+      },
+      "npm:debug@2.6.9": {
+        "main": "src/browser.js",
+        "jspmNodeConversion": false,
+        "format": "cjs",
+        "map": {
+          "./src/browser.js": {
+            "node": "./src/node.js"
+          },
+          "./node.js": {
+            "browser": "./src/browser.js"
+          },
+          "fs": "@node/fs",
+          "net": "@node/net",
+          "tty": "@node/tty",
+          "util": "@node/util"
+        }
+      },
+      "npm:esprima@2.7.3": {
+        "jspmNodeConversion": false
+      },
+      "npm:inherits@2.0.1": {
+        "ignore": [
+          "test.js"
+        ]
+      },
+      "npm:inherits@2.0.3": {
+        "ignore": [
+          "test.js"
+        ]
+      },
+      "npm:inherits@2.0.4": {
+        "ignore": [
+          "test.js"
+        ]
+      },
+      "npm:jquery@3.5.1": {
+        "format": "amd"
+      },
+      "npm:lodash@4.17.11": {
+        "map": {
+          "buffer": "@empty",
+          "process": "@empty"
+        }
+      },
+      "npm:lodash@4.17.20": {
+        "map": {
+          "buffer": "@empty",
+          "process": "@empty"
+        }
+      },
+      "npm:pbkdf2@3.0.17": {
+        "main": "browser.js"
+      },
+      "npm:safe-buffer@5.1.2": {
+        "map": {
+          "./index.js": {
+            "browser": "index.js"
+          }
+        }
+      },
+      "npm:safe-buffer@5.2.1": {
+        "map": {
+          "./index.js": {
+            "browser": "index.js"
+          }
+        }
+      },
+      "npm:svgo@0.7.2": {
+        "meta": {
+          "lib/svgo/config.js": {
+            "deps": [
+              "../../plugins/removeDoctype",
+              "../../plugins/removeXMLProcInst",
+              "../../plugins/removeComments",
+              "../../plugins/removeMetadata",
+              "../../plugins/removeEditorsNSData",
+              "../../plugins/cleanupAttrs",
+              "../../plugins/minifyStyles",
+              "../../plugins/convertStyleToAttrs",
+              "../../plugins/cleanupIDs",
+              "../../plugins/removeRasterImages",
+              "../../plugins/removeUselessDefs",
+              "../../plugins/cleanupNumericValues",
+              "../../plugins/cleanupListOfValues",
+              "../../plugins/convertColors",
+              "../../plugins/removeUnknownsAndDefaults",
+              "../../plugins/removeNonInheritableGroupAttrs",
+              "../../plugins/removeUselessStrokeAndFill",
+              "../../plugins/removeViewBox",
+              "../../plugins/cleanupEnableBackground",
+              "../../plugins/removeHiddenElems",
+              "../../plugins/removeEmptyText",
+              "../../plugins/convertShapeToPath",
+              "../../plugins/moveElemsAttrsToGroup",
+              "../../plugins/moveGroupAttrsToElems",
+              "../../plugins/collapseGroups",
+              "../../plugins/convertPathData",
+              "../../plugins/convertTransform",
+              "../../plugins/removeEmptyAttrs",
+              "../../plugins/removeEmptyContainers",
+              "../../plugins/mergePaths",
+              "../../plugins/removeUnusedNS",
+              "../../plugins/transformsWithOnePath",
+              "../../plugins/sortAttrs",
+              "../../plugins/removeTitle",
+              "../../plugins/removeDesc",
+              "../../plugins/removeDimensions",
+              "../../plugins/removeAttrs",
+              "../../plugins/addClassesToSVGElement",
+              "../../plugins/removeStyleElement",
+              "../../plugins/removeXMLNS",
+              "../../plugins/removeElementsByAttr",
+              "../../plugins/addAttributesToSVGElement"
+            ]
+          }
+        }
+      },
+      "npm:tslib@1.10.0": {
+        "format": "cjs",
+        "meta": {
+          "tslib.js": {
+            "esModule": true
+          }
+        }
+      },
+      "npm:tslib@1.9.3": {
+        "format": "cjs",
+        "meta": {
+          "tslib.js": {
+            "esModule": true
+          }
+        }
+      }
+    }
+  },
+  "type": "module"
+}

@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mmf": {
+    "name": "pratisrsti",
+    "host": "localhost",
+    "port": 3306,
+    "url":"",
+    "database": "pratisrsti",
+    "password": "",
+    "user": "root",
+    "connector": "mysql"
+  }
+}
